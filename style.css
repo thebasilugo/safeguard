@@ -21,6 +21,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background: var(--bg-light);
+  overflow: hidden;
 }
 
 .container {
@@ -170,7 +171,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* 3:48:36 */
 .alert-container {
   position: fixed;
   width: 300px;
@@ -189,4 +189,17 @@ body {
 
 .active.alert-container {
   right: -300px;
+}
+
+@media only screen and (max-width: 415px) {
+  body {
+    padding: 0 10px;
+    background: rgb(22, 32, 37);
+    font-size: 15px;
+    min-height: 80vh;
+  }
+
+  .options {
+    font-size: 13px;
+  }
 }
