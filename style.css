@@ -1,13 +1,16 @@
 /* update */
 
 :root {
-  --bg-light: rgba(66, 133, 244, 0.3);
+  --lg-screen-bg: rgba(66, 133, 244, 0.3);
   --bg-dark: rgba(0, 0, 0, 0.7);
   --container: rgba(255, 255, 255, 0.9);
   --indicate-weak: red;
   --indicate-medium: orange;
   --indicate-medium2: rgb(241, 200, 11);
   --indicate-strong: green;
+  --lg-screen-bg: rgb(161, 161, 161);
+  --md-screen-bg: lightgrey;
+  --sm-screen-bg: whitesmoke;
 }
 
 * {
@@ -22,8 +25,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: var(--bg-light);
+  min-height: 80vh;
+  min-width: 320px;
+  background: var(--lg-screen-bg);
   overflow: hidden;
 }
 
@@ -37,7 +41,7 @@ body {
 .container h2 {
   font-weight: 600;
   font-size: 22px;
-  padding: 18px 20px;
+  padding: 16px;
   border-bottom: 1px solid rgb(212, 219, 229);
 }
 
@@ -127,7 +131,6 @@ body {
 .pass-settings .options .option {
   display: flex;
   margin-bottom: 1rem;
-  width: calc(100% / 2);
 }
 
 .options .option:first-child {
@@ -141,7 +144,16 @@ body {
 .options .option input {
   height: 16px;
   width: 16px;
+  transform: translateY(2px);
   cursor: pointer;
+}
+
+.options .option.odd {
+  width: 57%;
+}
+
+.options .option.even {
+  width: 43%;
 }
 
 .options .option label {
@@ -149,8 +161,13 @@ body {
   padding-left: 0.63rem;
 }
 
-.wrapper .generate-btn {
-  width: 100%;
+.wrapper .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .generate-btn,
+.wrapper .add-btn {
   /* color: #fff; */
   border: 2px solid #4285f4;
   outline: none;
@@ -158,20 +175,41 @@ body {
   font-weight: 600;
   /* background: #4285f4; */
   font-size: 1.06rem;
-  padding: 0.94rem 0;
+  padding: 8px;
   border-radius: 5px;
   text-transform: uppercase;
   margin: 0.94rem 0 1.3rem;
   color: #4285f4;
   background: transparent;
-  transition: all 0.26s ease-in-out;
+  box-shadow: none;
+  transition: all 0.1s ease-in-out;
 }
 
-.wrapper .generate-btn:hover {
+.wrapper .generate-btn:hover,
+.wrapper .add-btn:hover {
   background: #4285f4;
   color: white;
   border: 2px solid #4285f4;
-  transform: translateY(-2px);
+  box-shadow: 1px 2px 3px #000;
+  transform: translateY(-1px);
+}
+
+.wrapper .generate-btn:active,
+.wrapper .add-btn:active {
+  box-shadow: none;
+  transform: translateY(0px);
+}
+
+.wrapper .generate-btn {
+  width: 85%;
+}
+
+.wrapper .add-btn {
+  width: 12%;
+}
+
+.wrapper .add-btn i {
+  transform: translateX(3px);
 }
 
 /* 3:48:36 */
@@ -198,12 +236,39 @@ body {
 @media only screen and (max-width: 415px) {
   body {
     padding: 0 10px;
-    background: rgb(22, 32, 37);
+    background: var(--md-screen-bg);
     font-size: 15px;
     min-height: 80vh;
   }
 
   .options {
     font-size: 13px;
+  }
+
+  .wrapper .add-btn i {
+    transform: translateX(0px);
+  }
+}
+
+@media only screen and (max-width: 348px) {
+  * {
+    font-size: 10px;
+    font-weight: 900;
+  }
+
+  body {
+    background: var(--sm-screen-bg);
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .wrapper .generate-btn {
+    font-size: 0.9rem;
+  }
+
+  .wrapper .add-btn i {
+    transform: translateX(-2px);
   }
 }
