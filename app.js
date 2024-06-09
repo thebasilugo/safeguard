@@ -147,3 +147,29 @@ generateBtn.addEventListener("click", generatePassword);
 // login to password book to view password
 // recover main password through mail
 
+// show the saved info & passwords
+// Get the modal
+var passwordModal = document.querySelector("#password-modal");
+
+// Get the button that opens the modal
+var btn = document.querySelector(".add-btn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  passwordModal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  passwordModal.style.display = "none";
+};
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function (event) {
+//   if (event.target == passwordModal) {
+//     passwordModal.style.display = "none";
+//   }
+// };
