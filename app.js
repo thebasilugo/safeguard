@@ -146,18 +146,21 @@ generateBtn.addEventListener("click", generatePassword);
 // recover main password through mail
 
 // show the saved info & passwords
+const showSavedPassword = document.querySelector(".show-saved-password");
+
 // Get the modal
-var passwordModal = document.querySelector("#password-modal");
+const passwordModal = document.querySelector("#password-modal");
 
 // Get the button that opens the modal
-var btn = document.querySelector(".add-btn");
+const modalBtn = document.querySelector(".modal-btn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-btn.onclick = function () {
+modalBtn.onclick = function () {
   passwordModal.style.display = "block";
+  showSavedPassword.innerHTML = passwordInput.value;
 };
 
 // When the user clicks on <span> (x), close the modal
