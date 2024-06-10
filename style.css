@@ -167,7 +167,8 @@ body {
 }
 
 .wrapper .generate-btn,
-.wrapper .add-btn {
+.wrapper .add-btn,
+.wrapper .modal-btn {
   /* color: #fff; */
   border: 2px solid #4285f4;
   outline: none;
@@ -186,7 +187,8 @@ body {
 }
 
 .wrapper .generate-btn:hover,
-.wrapper .add-btn:hover {
+.wrapper .add-btn:hover,
+.wrapper .modal-btn:hover {
   background: #4285f4;
   color: white;
   border: 2px solid #4285f4;
@@ -195,20 +197,23 @@ body {
 }
 
 .wrapper .generate-btn:active,
-.wrapper .add-btn:active {
+.wrapper .add-btn:active,
+.wrapper .modal-btn:active {
   box-shadow: none;
   transform: translateY(0px);
 }
 
 .wrapper .generate-btn {
-  width: 85%;
+  width: 70%;
 }
 
-.wrapper .add-btn {
+.wrapper .add-btn,
+.wrapper .modal-btn {
   width: 12%;
 }
 
-.wrapper .add-btn i {
+.wrapper .add-btn i,
+.wrapper .modal-btn i {
   transform: translateX(3px);
 }
 
@@ -231,46 +236,6 @@ body {
 
 .active.alert-container {
   right: -300px;
-}
-
-@media only screen and (max-width: 415px) {
-  body {
-    padding: 0 10px;
-    background: var(--md-screen-bg);
-    font-size: 15px;
-    min-height: 80vh;
-  }
-
-  .options {
-    font-size: 13px;
-  }
-
-  .wrapper .add-btn i {
-    transform: translateX(0px);
-  }
-}
-
-@media only screen and (max-width: 348px) {
-  * {
-    font-size: 10px;
-    font-weight: 900;
-  }
-
-  body {
-    background: var(--sm-screen-bg);
-  }
-
-  .title {
-    font-size: 0.9rem;
-  }
-
-  .wrapper .generate-btn {
-    font-size: 0.9rem;
-  }
-
-  .wrapper .add-btn i {
-    transform: translateX(-2px);
-  }
 }
 
 /* The Modal (background) */
@@ -310,4 +275,54 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 415px) {
+  body {
+    padding: 0 10px;
+    background: var(--md-screen-bg);
+    font-size: 15px;
+    min-height: 80vh;
+  }
+
+  .options {
+    font-size: 13px;
+  }
+
+  .wrapper .add-btn i,
+  .wrapper .modal-btn i {
+    transform: translateX(0px);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .wrapper .generate-btn,
+  .wrapper .add-btn,
+  .wrapper .modal-btn {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 348px) {
+  * {
+    font-size: 10px;
+    font-weight: 900;
+  }
+
+  body {
+    background: var(--sm-screen-bg);
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .wrapper .generate-btn {
+    font-size: 0.8rem;
+  }
+
+  .wrapper .add-btn i,
+  .wrapper .modal-btn i {
+    transform: translateX(-2px);
+  }
 }
