@@ -1,5 +1,3 @@
-// update
-
 const lengthSlider = document.querySelector(".pass-length input");
 const sliderValue = document.querySelector(".pass-length span");
 const options = document.querySelectorAll(".option input");
