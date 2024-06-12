@@ -1,11 +1,21 @@
+const body = document.querySelector("body");
 const lengthSlider = document.querySelector(".pass-length input");
 const sliderValue = document.querySelector(".pass-length span");
 const options = document.querySelectorAll(".option input");
 // const copyIcon = document.querySelector(".input-box span far fa-copy");
 const passwordInput = document.querySelector(".input-box input");
+const passLengthRange = document.querySelector("#pass-length-range");
 const passIndicator = document.querySelector(".pass-indicator");
 const generateBtn = document.querySelector(".generate-btn");
 const copyIndicator = document.querySelector("alert-container active");
+
+// checkboxes
+const lowercaseCheckBox = document.querySelector("#lowercase").checked;
+const uppercaseCheckBox = document.querySelector("#uppercase").checked;
+const numbersCheckBox = document.querySelector("#numbers").checked;
+const symbolsCheckBox = document.querySelector("#symbols").checked;
+const spacesCheckBox = document.querySelector("#spaces").checked;
+const excDuplicateCheckBox = document.querySelector("#exc-duplicate").checked;
 
 const characters = {
   lowercase: "abcdefghijklmnopqrstuvwxyz",
@@ -17,18 +27,31 @@ const characters = {
 const generatePassword = () => {
   let staticPassword = "";
   let randomPassword = "";
-  let excludeDuplicate = false; // exclude duplicate update
+  let excludeDuplicate = false;
   let passLength = lengthSlider.value;
   console.log(passLength);
-  // console.log(passLength)
 
   options.forEach((option) => {
     // looping through each option's checkbox
     if (option.checked) {
       // if checkbox is checked
-      // console.log(option)
-      // if checkbox id isn't exc-duplicate && spaces
-      if (option.id !== "exc-duplicate" && option.id !== "spaces") {
+      // lowercase + excDup = 26
+      // lowercase + symbols + excDup = 29
+      if (option.id === "lowercase" && option.id === "exc-duplicate") {
+        passLengthRange.setAttribute("max", "26");
+      }
+      // else if (
+      //   option.id === "lowercase" &&
+      //   option.id === "symbols" &&
+      //   option.id === "exc-duplicate"
+      // ) {
+      //   if (passLength >= 29) {
+      //     passLength = 29;
+      //   }
+      //   passLength = Math.min(passLength, 26);
+      // }
+      else if (option.id !== "exc-duplicate" && option.id !== "spaces") {
+        // if checkbox id isn't exc-duplicate && spaces
         // adding particular key value from character object to staticPassword
         staticPassword += characters[option.id];
       } else if (option.id === "spaces") {
@@ -37,6 +60,15 @@ const generatePassword = () => {
       } else {
         // else pass 'true' value to excludeDuplicate
         excludeDuplicate = true;
+      }
+    }
+  });
+
+  passLengthRange.addEventListener("change", () => {
+    if (lowercaseCheckBox && excDuplicateCheckBox) {
+      passLengthRange.max = 26;
+      if (passLengthRange.value > 26) {
+        passLengthRange.value = 26;
       }
     }
   });
