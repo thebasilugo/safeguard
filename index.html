@@ -22,16 +22,17 @@
   </head>
   <body>
     <div class="container">
-      <h2>Password Generator</h2>
+      <h2 class="mx-3">Password Generator</h2>
       <div class="wrapper">
         <div class="input-box text-2xl">
           <input
             type="text"
             value=""
             placeholder="Generate a password"
+            title="randomly generated password"
             disabled
           />
-          <span><i class="copy outline icon"></i></span>
+          <span id="copy-icon"><i class="copy outline icon"></i></span>
         </div>
         <div class="pass-indicator"></div>
         <div class="pass-length">
@@ -39,7 +40,13 @@
             <label for="" class="title">Password Length</label>
             <span>15</span>
           </div>
-          <input type="range" min="1" max="30" step="1" />
+          <input
+            id="pass-length-range"
+            type="range"
+            min="1"
+            max="30"
+            step="1"
+          />
         </div>
         <div class="pass-settings">
           <label for="" class="title">Password Settings</label>
@@ -65,12 +72,12 @@
               <label for="symbols">Symbols</label>
             </li>
             <!-- Exclude Duplicates option -->
-            <li class="option odd">
+            <li class="option odd hidden">
               <input type="checkbox" name="" id="exc-duplicate" />
               <label for="exc-duplicate">Exclude Duplicates</label>
             </li>
             <!-- Include Spaces option -->
-            <li class="option even">
+            <li class="option even hidden">
               <input type="checkbox" name="" id="spaces" />
               <label for="spaces">Include Spaces</label>
             </li>
@@ -78,8 +85,8 @@
         </div>
         <div class="button-container">
           <button class="generate-btn">Generate Password</button>
-          <button class="add-btn">
-            <!-- The button that adds the password modal -->
+          <button class="add-btn" title="add to password">
+            <!-- The button that adds the password to the password book -->
             <i class="plus icon"></i>
           </button>
           <button class="modal-btn">
@@ -88,7 +95,7 @@
           </button>
         </div>
       </div>
-      <!-- <div class="alert-container active">Password Copied!</div> -->
+      <div class="alert-container remove"></div>
     </div>
 
     <!-- The Modal -->
