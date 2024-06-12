@@ -1,4 +1,4 @@
-# Safeguard App
+# Safeguard
 
 Safeguard is a password management application that allows users to generate and store secure passwords.
 
@@ -7,6 +7,10 @@ Safeguard is a password management application that allows users to generate and
 - Generate secure, random passwords
 - Customize password length
 - Include/exclude uppercase letters, lowercase letters, numbers, and symbols
+- Passwords can be added to a password book for easy access
+- Password strength indicator
+<!-- - Option to exclude duplicate characters in passwords
+- Option to include spaces in passwords -->
 
 ## Usage
 
@@ -16,17 +20,18 @@ or alternatively, you could copy and paste this link: https://thebasilugo.github
 
 OR
 
-    Clone or download the repository to your local machine.
-    Open the project in your preferred code editor or simply launch index.html in your web browser.
+1. Clone or download the repository to your local machine.
+2. Open the project in your preferred code editor.
+3. Launch `index.html` in your web browser.
 
 ## Technologies Used
 
 This project is built using the following technologies:
 
-    HTML
-    CSS / TailwindCSS
-    JavaScript
-    Semantic UI
+- HTML
+- Tailwind CSS
+- JavaScript
+- Semantic UI for icons
 
 No additional dependencies are required.
 
