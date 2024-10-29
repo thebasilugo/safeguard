@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Safeguard - Your Cybersecurity Companion</title>
-    <link
+		<link
 			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+			rel="stylesheet"
+		/>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<style>
 			.tooltip {
@@ -21,7 +21,7 @@
 				white-space: nowrap;
 			}
 		</style>
-  </head>
+	</head>
 	<body class="bg-gray-100 text-gray-900">
 		<!-- Header Section -->
 		<header class="bg-blue-600 text-white py-6">
@@ -30,7 +30,7 @@
 				<p class="mt-2">
 					Your cybersecurity companion for secure password management.
 				</p>
-        </div>
+			</div>
 		</header>
 
 		<!-- Features Section -->
@@ -44,70 +44,85 @@
 						<p class="bg-blue-300 mx-auto rounded my-2 w-2/3 p-1">
 							<em>Coming soon...</em>
 						</p>
-          </div>
+					</div>
 					<div class="bg-white p-6 rounded-lg shadow-md">
 						<h3 class="text-xl font-bold">Password Suggestions</h3>
 						<p>Receive updates and avoid reusing passwords across apps.</p>
-        </div>
-        <div class="pass-settings">
-          <label for="" class="title">Password Settings</label>
-          <ul class="options">
-            <!-- Lowercase option -->
-            <li class="option odd">
-              <input type="checkbox" name="" id="lowercase" checked />
-              <label for="lowercase">Lowercase (a-z)</label>
-            </li>
-            <!-- Uppercase option -->
-            <li class="option even">
-              <input type="checkbox" name="" id="uppercase" />
-              <label for="uppercase">Uppercase (A-Z)</label>
-            </li>
-            <!-- Numbers option -->
-            <li class="option odd">
-              <input type="checkbox" name="" id="numbers" />
-              <label for="numbers">Numbers (0-9)</label>
-            </li>
-            <!-- Symbols option -->
-            <li class="option even">
-              <input type="checkbox" name="" id="symbols" />
-              <label for="symbols">Symbols</label>
-            </li>
-            <!-- Exclude Duplicates option -->
-            <li class="option odd hidden">
-              <input type="checkbox" name="" id="exc-duplicate" />
-              <label for="exc-duplicate">Exclude Duplicates</label>
-            </li>
-            <!-- Include Spaces option -->
-            <li class="option even hidden">
-              <input type="checkbox" name="" id="spaces" />
-              <label for="spaces">Include Spaces</label>
-            </li>
-          </ul>
-        </div>
-        <div class="button-container">
-          <button class="generate-btn">Generate Password</button>
-          <button class="add-btn" title="add to password">
-            <!-- The button that adds the password to the password book -->
-            <i class="plus icon"></i>
-          </button>
-          <button class="modal-btn">
-            <!-- The button that opens the modal to show added passwords -->
-            <i class="chevron right icon"></i>
-          </button>
-        </div>
-      </div>
-      <div class="alert-container remove"></div>
-    </div>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md">
+						<h3 class="text-xl font-bold">Mini Apps</h3>
+						<p>
+							Access tools like Brute Force, Password Checker, and Cyber Tips.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- The Modal -->
-    <div id="password-modal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p class="show-saved-password">you have no saved passwords ...</p>
-      </div>
-    </div>
+		<!-- Mini Apps Section -->
+		<section class="py-12 bg-gray-200 relative">
+			<div class="container mx-auto text-center">
+				<h2 class="text-3xl font-semibold mb-6">Explore Our Mini Apps</h2>
+				<div
+					class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4"
+				>
+					<div class="relative group py-2">
+						<a
+							href="/cyber-tips/"
+							target="_blank"
+							class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
+							>Cyber Tips</a
+						>
+						<span class="tooltip group-hover:block"
+							>Get the latest tips to enhance your online security!</span
+						>
+					</div>
+					<div class="relative group py-2">
+						<a
+							href="/pwd-gen/"
+							target="_blank"
+							class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
+							>Password Generator</a
+						>
+						<span class="tooltip group-hover:block"
+							>Generate strong, secure passwords easily!</span
+						>
+					</div>
+					<div class="relative group py-2">
+						<a
+							href="/pwd-check/"
+							target="_blank"
+							class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
+							>Password Check</a
+						>
+						<span class="tooltip group-hover:block"
+							>Check the strength of your existing passwords!</span
+						>
+					</div>
+					<div class="relative group py-2">
+						<a
+							href="/brute-force/"
+							target="_blank"
+							class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
+							>Brute Force</a
+						>
+						<span class="tooltip group-hover:block"
+							>Simulate brute force attacks to test your passwords!</span
+						>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <script src="app.js"></script>
-  </body>
+		<!-- Footer -->
+		<footer class="bg-blue-600 text-white py-6">
+			<div class="container mx-auto text-center">
+				<p>&copy; 2024 Safeguard. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script>
+			// You can add interactivity with JavaScript here if needed
+		</script>
+	</body>
 </html>
