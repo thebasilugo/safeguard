@@ -16,118 +16,115 @@
 				background: rgba(0, 0, 0, 0.8);
 				color: white;
 				padding: 5px 10px;
-				margin: 16px 0;
 				border-radius: 5px;
 				white-space: nowrap;
 			}
+			.group:hover .tooltip {
+				/* display: block; */
+				display: none;
+			}
 		</style>
 	</head>
-	<body class="bg-gray-100 text-gray-900">
+	<body class="bg-gray-50 text-gray-900 font-sans">
 		<!-- Header Section -->
-		<header class="bg-blue-600 text-white py-6">
+		<header
+			class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8"
+		>
 			<div class="container mx-auto text-center">
-				<h1 class="text-4xl font-bold">Safeguard</h1>
-				<p class="mt-2">
-					Your cybersecurity companion for secure password management.
+				<h1 class="text-5xl font-extrabold">Safeguard</h1>
+				<p class="mt-3 text-lg">
+					Let's make sure that <em>you</em> stay safe on the internet.
 				</p>
 			</div>
 		</header>
 
-		<!-- Features Section -->
+		<!-- Mini Apps Section -->
 		<section class="py-12">
 			<div class="container mx-auto text-center">
-				<h2 class="text-3xl font-semibold mb-6">Features</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<div class="bg-white p-6 rounded-lg shadow-md">
-						<h3 class="text-xl font-bold">Secure Password Storage</h3>
-						<p>Save your passwords safely in a secure lock.</p>
-						<p class="bg-blue-300 mx-auto rounded my-2 w-2/3 p-1">
-							<em>Coming soon...</em>
-						</p>
-					</div>
-					<div class="bg-white p-6 rounded-lg shadow-md">
-						<h3 class="text-xl font-bold">Password Suggestions</h3>
-						<p>Receive updates and avoid reusing passwords across apps.</p>
-					</div>
-					<div class="bg-white p-6 rounded-lg shadow-md">
-						<h3 class="text-xl font-bold">Mini Apps</h3>
-						<p>
-							Access tools like Brute Force, Password Checker, and Cyber Tips.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Mini Apps Section -->
-		<section class="py-12 bg-gray-200 relative">
-			<div class="container mx-auto text-center">
-				<h2 class="text-3xl font-semibold mb-6">Explore Our Mini Apps</h2>
+				<h2 class="text-4xl font-semibold mb-8">Explore Our Mini Apps</h2>
 				<div
-					class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4"
+					class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
 				>
-					<div class="relative group py-2">
-						<a
-							href="/cyber-tips/"
-							target="_blank"
-							class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
-							>Cyber Tips</a
-						>
-						<span class="tooltip group-hover:block"
-							>Get the latest tips to enhance your online security!</span
+					<div
+						class="relative group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+					>
+						<a href="cyber-tips/" target="_blank">
+							<h3 class="text-lg font-bold">Cyber Tips</h3>
+							<p class="mt-2">
+								Get the latest tips to enhance your online security!
+							</p>
+							<span class="tooltip"
+								>Get the latest tips to enhance your online security!</span
+							>
+						</a>
+					</div>
+					<div
+						class="relative group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+					>
+						<a href="pwd-gen/" target="_blank">
+							<h3 class="text-lg font-bold">Password Generator</h3>
+							<p class="mt-2">Generate strong, secure passwords easily!</p>
+							<span class="tooltip"
+								>Generate strong, secure passwords easily!</span
+							></a
 						>
 					</div>
-					<div class="relative group py-2">
-						<a
-							href="/pwd-gen/"
-							target="_blank"
-							class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
-							>Password Generator</a
-						>
-						<span class="tooltip group-hover:block"
-							>Generate strong, secure passwords easily!</span
-						>
-					</div>
-					<div class="relative group py-2">
-						<a
-							href="/pwd-check/"
-							target="_blank"
-							class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
-							>Password Check</a
-						>
-						<span class="tooltip group-hover:block"
-							>Check the strength of your existing passwords!</span
+					<div
+						class="relative group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+					>
+						<a href="pwd-check/" target="_blank">
+							<h3 class="text-lg font-bold">Password Check</h3>
+							<p class="mt-2">Check the strength of your existing passwords!</p>
+							<span class="tooltip"
+								>Check the strength of your existing passwords!</span
+							></a
 						>
 					</div>
-					<div class="relative group py-2">
-						<a
-							href="/brute-force/"
-							target="_blank"
-							class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition duration-300"
-							>Brute Force</a
-						>
-						<span class="tooltip group-hover:block"
-							>Simulate brute force attacks to test your passwords!</span
+					<div
+						class="relative group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+					>
+						<a href="brute-force/" target="_blank">
+							<h3 class="text-lg font-bold">Brute Force</h3>
+							<p class="mt-2">
+								Simulate brute force attacks to test your passwords!
+							</p>
+							<span class="tooltip"
+								>Simulate brute force attacks to test your passwords!</span
+							></a
 						>
 					</div>
+					<!-- <div
+						class="relative group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+					>
+						<a href="typosquattng/" target="_blank">
+							<h3 class="text-lg font-bold">TypoSquatting Check</h3>
+							<p class="mt-2">Identify potential typo-squatting threats.</p>
+							<span class="tooltip"
+								>Check for domain variations that could be used against
+								you.</span
+							>
+						</a>
+					</div> -->
 				</div>
 			</div>
 		</section>
 
 		<!-- Footer -->
-		<footer class="bg-blue-600 text-white py-6">
+		<!-- <footer
+			class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4"
+		>
 			<div class="container mx-auto text-center">
 				<p>
 					&copy;
-					<span class="text-white hover:text-black hover:underline">
-						<a href="https://www.linkedin.com/in/thebasilugo" target="_blank"
+					<span class="text-white hover:text-gray-300 hover:underline">
+						<a href="https://www.linkedin.com/in target="_blank"/thebasilugo" target="_blank"
 							>thebasilugo</a
-						></span
-					>
+						>
+					</span>
 					<span id="current-year"></span>. All rights reserved.
 				</p>
 			</div>
-		</footer>
+		</footer> -->
 
 		<script>
 			// Set the current year dynamically
