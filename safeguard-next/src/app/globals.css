@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #ffffff; /* Light mode background */
+	--foreground: #000000; /* Light mode text */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.dark {
+	--background: #1a202c; /* Dark mode background (e.g., Tailwind's gray-900) */
+	--foreground: #f7fafc; /* Dark mode text (e.g., Tailwind's gray-100) */
+}
+.btn:active {
+	opacity: 0.7;
+}
+
+/* .input {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%;
+}
+
+.btn {
+	background-color: #1e40af;
+	color: white;
+	padding: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+} */
