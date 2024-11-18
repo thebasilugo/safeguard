@@ -74,7 +74,7 @@ export default function ClientComponent() {
 
 	return (
 		<div>
-			<section id="demo" className="mb-16 max-w-fit">
+			<section id="demo" className="mb-16 lg:mx-40">
 				<h3 className="text-3xl font-semibold text-center mb-8">
 					Experience Safeguard in Action
 				</h3>
