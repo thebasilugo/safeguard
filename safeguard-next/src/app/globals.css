@@ -15,6 +15,7 @@ html {
 	--background: #1a202c; /* Dark mode background (e.g., Tailwind's gray-900) */
 	--foreground: #f7fafc; /* Dark mode text (e.g., Tailwind's gray-100) */
 }
+
 .btn:active {
 	opacity: 0.7;
 }
