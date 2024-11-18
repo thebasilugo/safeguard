@@ -60,9 +60,9 @@ export default function ServerComponent() {
 					</div>
 				</section> */}
 
-				<div className="flex justify-center items-center max-w-screen-lg mx-auto">
-					<ClientComponent />
-				</div>
+				{/* <div className="flex justify-center items-center"> */}
+				<ClientComponent />
+				{/* </div> */}
 			</main>
 			{/* <section className="pb-8 mx-auto text-center">
 				<h1 className="text-2xl font-bold mb-2">Join Our Waitlist</h1>
