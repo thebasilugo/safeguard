@@ -30,7 +30,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`antialiased dark:bg-gray-950 dark:text-gray-50`}>
 				{/* <Header /> */}
-				<div className="overflow-hidden mb-12">{children}</div>
+				<div className="overflow-hidden">{children}</div>
 				<Footer />
 			</body>
 		</html>
