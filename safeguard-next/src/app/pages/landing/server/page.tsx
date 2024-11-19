@@ -3,7 +3,7 @@ import { Shield, Lock, Key, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import ClientComponent from "../client/page";
-import WaitlistForm from "@/components/WaitlistForm";
+// import WaitlistForm from "@/components/WaitlistForm";
 
 export default function ServerComponent() {
 	return (
