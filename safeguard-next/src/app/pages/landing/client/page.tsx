@@ -244,7 +244,7 @@ export default function ClientComponent() {
 										{/* <em className="text-red-400 text-[12px]">
 											Login to add passwords
 										</em> */}
-										<em className="text-blue-400 text-[12px]">coming soon </em>
+										<em className="text-green-400">coming soon </em>
 									</span>
 								</div>
 							)}
