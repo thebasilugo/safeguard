@@ -19,7 +19,7 @@ const MainPage = () => {
 	return (
 		<div>
 			<LandingPage />
-			{/* <LoginPage /> */}
+			<LoginPage />
 			{/* <SignupPage /> */}
 			{/* <Dashboard /> */}
 			{/* <CybersecurityTips /> */}
@@ -42,4 +42,4 @@ const MainPage = () => {
 	);
 };
 
-export default page;
+export default MainPage;
