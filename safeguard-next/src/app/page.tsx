@@ -9,7 +9,13 @@ import PasswordStrengthChecker from "@/components/PasswordStrengthChecker";
 import EnhancedPasswordGenerator from "@/components/PasswordGenerator";
 import BruteForceVisualTool from "@/components/BruteForceVisualTool";
 
-const page = () => {
+const MainPage = () => {
+	const [showPasswordGenerator, setShowPasswordGenerator] = useState(false);
+
+	const handleClosePasswordGenerator = () => {
+		setShowPasswordGenerator(false);
+	};
+
 	return (
 		<div>
 			<LandingPage />
