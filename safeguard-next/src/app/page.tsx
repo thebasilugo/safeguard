@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import LandingPage from "./pages/landing/page";
 import LoginPage from "./auth/login/page";
 import SignupPage from "./auth/signup/page";
