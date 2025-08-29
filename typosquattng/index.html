@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Typosquatting Checker</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-gray-100 flex flex-col items-center justify-center h-screen">
+		<div class="bg-white p-8 rounded-lg shadow-lg w-80">
+			<h1 class="text-xl font-bold mb-4">Typosquatting Checker</h1>
+			<input
+				type="text"
+				id="urlInput"
+				placeholder="Enter URL (e.g. example.com)"
+				class="border border-gray-300 p-2 rounded w-full mb-4"
+			/>
+			<button
+				id="checkBtn"
+				class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+			>
+				Check URL
+			</button>
+			<div id="result" class="mt-4"></div>
+		</div>
+
+		<script>
+			const knownDomains = [
+				"example.com",
+				"google.com",
+				"facebook.com",
+				"twitter.com",
+				"github.com",
+				// Add more known domains here
+			];
+
+			const checkUrl = () => {
+				const input = document.getElementById("urlInput").value.trim();
+				const resultDiv = document.getElementById("result");
+
+				if (!input) {
+					resultDiv.textContent = "Please enter a URL.";
+					return;
+				}
+
+				// Check if the entered URL is in the list of known domains
+				const isKnown = knownDomains.includes(input);
+				if (isKnown) {
+					resultDiv.textContent = "The URL is safe!";
+					resultDiv.classList.remove("text-red-500");
+					resultDiv.classList.add("text-green-500");
+				} else {
+					const suggestedDomain = getClosestDomain(input);
+					if (suggestedDomain) {
+						resultDiv.innerHTML = `Did you mean: <a href="https://${suggestedDomain}" class="text-blue-500 underline">${suggestedDomain}</a>?`;
+						resultDiv.classList.remove("text-green-500");
+						resultDiv.classList.add("text-red-500");
+					} else {
+						resultDiv.textContent = "No suggestions available.";
+						resultDiv.classList.remove("text-green-500");
+						resultDiv.classList.add("text-red-500");
+					}
+				}
+			};
+
+			const getClosestDomain = (input) => {
+				// Simple logic to suggest a similar domain
+				return knownDomains.find(
+					(domain) =>
+						domain.split(".").slice(-2)[0] === input.split(".").slice(-2)[0] &&
+						domain.length - input.length <= 2 // Allow minor typos
+				);
+			};
+
+			document.getElementById("checkBtn").addEventListener("click", checkUrl);
+		</script>
+	</body>
+</html>
