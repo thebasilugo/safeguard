@@ -55,8 +55,12 @@ export default function ServerComponent() {
 						to understand the importance of strong passwords.
 					</p>
 					<div className="flex justify-center space-x-4">
-						<button>View Cyber Tips</button>
-						<button>Brute Force Visualizer</button>
+						<button className="p-2 border rounded hover:bg-gray-900">
+							View Cyber Tips
+						</button>
+						<button className="p-2 border rounded hover:bg-gray-900">
+							Brute Force Visualizer
+						</button>
 					</div>
 				</section> */}
 
@@ -74,7 +78,7 @@ export default function ServerComponent() {
 
 function FeatureCard({ icon, title, description }: any) {
 	return (
-		<div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+		<div className="bg-gray-800 border border-gray-700 rounded-lg p-6 hover:-translate-y-2 transition-transform duration-250">
 			<div className="flex items-center space-x-2 mb-4">
 				{icon}
 				<h3 className="text-xl font-semibold text-white">{title}</h3>
